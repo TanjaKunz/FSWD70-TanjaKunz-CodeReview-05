@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" class="h-100">
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="description" content="Film Bibliothek">
+   <meta name="author" content="Tanja Kunz">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+
+   <title>Movie Factory</title>
+ </head>
+
+ <body class="d-flex flex-column">
+    <header class="fixed-top">
+      <div class="page-header" id="header">
+        <div class="col">
+          <img class="img-responsive">
+        </div>
+
+        <h1 class="col text-light m-0 py-3">Movie Factory</h1>        
+      </div>
+
+     <!-------- Navbar -------->
+      <nav class="navbar navbar-expand-md navbar-dark">
+         <a class="navbar-brand" href="#">Home</a>
+
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Film <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>              
+            </ul>         
+         </div>
+      </nav>
+    </header>
+
+<!------------ Begin page content ------------>
+
+<main role="main" class="flex-shrink-0 h-100">
+  <div class="container">
+    
+    <div class="row" id="headline">
+      <h3 class="text-light">Movies</h3>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"        aria-haspopup="true" aria-expanded="false">Dropdown
+        </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="#!">sort by likes</a>
+          <a class="dropdown-item" href="#!">sort by name</a>
+        </div>
+      </div>   
+    </div>
+
+    <div class="row" id="films">
+      <div class="col-3" id="box">
+        <div class="row">
+          <div class="col pic">
+            <img class="img-responsive">
+          </div>
+          
+          <div class="col info">
+            <h4 class="title text-light">movie</h4>
+            <p class="card-text info"></p>
+
+            <div class="row">
+              <div class="col text-light">Genre</div>
+              <div class="col genre"></div>
+            </div>
+
+            <div class="row">
+              <div class="col text-light">USK</div>
+              <div class="col usk"></div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <img class="like">
+              </div>
+              <div class="col counter"></div>
+            </div>
+
+            
+          </div>
+        </div>   
+      </div>
+
+
+
+
+
+
+
+
+
+      
+    </div>
+   
+  </div>
+</main>
+
+<!------------ End page content ------------>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-light">Movie Factory</span>
+  </div>
+</footer>
+
+
+   <!-- Optional JavaScript -->
+   <script src="js/data.json"></script>
+   <script src="js/script.js"></script>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </body>
+</html>
