@@ -7,11 +7,13 @@
    <meta name="author" content="Tanja Kunz">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   <!-- Bootstrap CSS -->
+   <!-- Bootstrap CSS, jquery -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
    <title>Movie Factory</title>
  </head>
@@ -20,7 +22,7 @@
     <header class="fixed-top">
       <div class="page-header" id="header">
         <div class="col">
-          <img class="img-responsive">
+          <img class="img-fluid">
         </div>
 
         <h1 class="col text-light m-0 py-3">Movie Factory</h1>        
@@ -53,10 +55,10 @@
 <main role="main" class="flex-shrink-0 h-100">
   <div class="container">
     
-    <div class="row" id="headline">
-      <h3 class="text-light">Movies</h3>
+    <div class="row mb-5" id="headline">
+      <h3 class="col-4 offset-4 text-center text-light">Movies</h3>
 
-      <div class="dropdown">
+      <div class="col ml-auto p-0 dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"        aria-haspopup="true" aria-expanded="false">Dropdown
         </button>
 
@@ -67,35 +69,39 @@
       </div>   
     </div>
 
-    <div class="row" id="films">
-      <div class="col-3" id="box">
+    <div class="row d-flex justify-content-around align-content-around" id="films">
+
+      <div class="col-lg-5 col-sm-11 py-3 mb-4 box">
         <div class="row">
-          <div class="col pic">
-            <img class="img-responsive">
+          <div class="col">
+            <img class="img-fluid rounded pic">
           </div>
           
-          <div class="col info">
-            <h4 class="title text-light">movie</h4>
-            <p class="card-text info"></p>
+          <div class="col d-flex flex-row flex-wrap info">
+            <div class="h4 text-light name">movie</div>
+            <p class="card-text text-light short"></p>
 
-            <div class="row">
+            <!-- <div class="row">
               <div class="col text-light">Genre</div>
-              <div class="col genre"></div>
-            </div>
+              <div class="col text-light genre"></div>
+            </div> -->
 
-            <div class="row">
-              <div class="col text-light">USK</div>
-              <div class="col usk"></div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <img class="like">
+            <div class="row w-100 align-self-end d-flex justify-content-end">
+              <div id="btn">
+                  <p>
+                    <button type="button" class="btn btn-default btn-sm text-success">
+                      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like
+                    </button>
+                  </p>
+                <!-- <img class="like"> -->
               </div>
-              <div class="col counter"></div>
-            </div>
 
-            
+              <div id="counter">
+                <div class="rounded-circle bg-success d-flex circle">
+                  <p class="text-light align-self-center counter"></p>
+                </div>
+              </div>
+            </div>            
           </div>
         </div>   
       </div>
@@ -104,13 +110,7 @@
 
 
 
-
-
-
-
-      
-    </div>
-   
+    </div>   
   </div>
 </main>
 
