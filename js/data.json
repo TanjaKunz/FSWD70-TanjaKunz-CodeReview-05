@@ -1,4 +1,4 @@
-var films = [ {
+var data = [ {
 
       "name": "Now You See Me",
       "short": "NOW YOU SEE ME pits an elite FBI squad in a game of cat and mouse against \"The Four Horsemen\", a super-team of the world's greatest illusionists. \"The Four Horsemen\" pull off a series of daring heists against corrupt business leaders during their performances, showering the stolen profits on their audiences while staying one step ahead of the law.",
