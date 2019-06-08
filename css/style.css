@@ -11,6 +11,9 @@ main {
 #header, .box {
   background-color: black; }
 
+.sortBtn {
+  background-color: #171E24; }
+
 .name {
   height: 1em; }
 
