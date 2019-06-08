@@ -13,6 +13,7 @@ $(document).ready(function(){
 
 		var img = $('.pic');
 		$(img[i]).attr('src', data[i].pic);
+		$(img[i]).attr('alt', data[i].name);
 
 		var movie = $('.movie');
 		$(movie[i]).text(data[i].name);
@@ -28,10 +29,6 @@ $(document).ready(function(){
 	};
 
 
-
-	// var likeBtn = $('.likeBtn');
-
-
 	$('.likeBtn').click(function() {
 		var knot = $(this).parents('div.cntBox');
 		var target = knot.find('.counter');
@@ -41,26 +38,11 @@ $(document).ready(function(){
 
 		$(target).text(cnt);
 
-	    });
-
-
-	// for ( i = 0; i < likeBtn.length; i++) {
-
-	// 	$(likeBtn[i]).click(function () {
-	// 		var knot = $(this).parents('div.cntBox');
-	// 		var target = knot.find('.counter');
-
-	// 		var cnt = $(target).html();
-	// 			cnt = parseInt(cnt)+1;
-
-	// 		$(target).text(cnt);
-
-	// 	    });
-	// };
+	});
 
 
 
-console.log();
+
 
 });
 

@@ -35,12 +35,8 @@
          <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Film <span class="sr-only">(current)</span></a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>              
+                <a class="nav-link disabled" href="#">Film <span class="sr-only">(current)</span></a>
+              </li>             
             </ul>         
          </div>
       </nav>
@@ -54,13 +50,13 @@
     <div class="row mb-5" id="headline">
       <h3 class="col-4 offset-4 text-center text-light">Movies</h3>
 
-      <div class="col ml-auto p-0 dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"        aria-haspopup="true" aria-expanded="false">Dropdown
+      <div class="col ml-auto p-0 dropdown d-flex">
+        <button class="btn btn-secondary dropdown-toggle offset-2 ml-auto mr-5" type="button" id="dropdownMenu1" data-toggle="dropdown"        aria-haspopup="true" aria-expanded="false">Sort
         </button>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <a class="dropdown-item" href="#!">sort by likes</a>
-          <a class="dropdown-item" href="#!">sort by name</a>
+          <a class="dropdown-item" href="#!">by likes</a>
+          
         </div>
       </div>   
     </div>
@@ -70,7 +66,7 @@
       <div class="col-lg-5 col-sm-11 py-3 mb-4 box">
         <div class="row">
           <div class="col">
-            <img class="img-fluid rounded pic">
+            <img class="img-fluid rounded pic" alt="Poster">
           </div>
           
           <div class="col d-flex flex-row flex-wrap info">
@@ -83,12 +79,12 @@
             </div> -->
 
             <div class="row w-100 align-self-end d-flex justify-content-end cntBox">
-              <div>
-                  <p>
-                    <button type="button" class="btn btn-default btn-sm text-success likeBtn">Like
-                      <span class="glyphicon glyphicon-thumbs-up"></span> 
+              <div class="d-flex">
+                  <div class="m-0 align-self-center">
+                    <button type="button" class="btn btn-default btn-sm text-success likeBtn pr-4">
+                      <span class="glyphicon glyphicon-thumbs-up"></span> Like
                     </button>
-                  </p>
+                  </div>
                 <!-- <img class="like"> -->
               </div>
 
@@ -101,10 +97,6 @@
           </div>
         </div>   
       </div>
-
-
-
-
 
     </div>   
   </div>
