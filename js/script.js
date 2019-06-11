@@ -6,28 +6,30 @@ $(document).ready(function(){
 	// $('.genre').text(films[0].genre);		
 	$('.counter').text(Math.floor((Math.random() * 1000) + 1));
 
+  
+	function insert(obj) {
+		for ( i = 1; i < obj.length; i++) {
+			
+			$('.box:first').clone().appendTo('#films');
 
-	for ( i = 1; i < data.length; i++) {
-		
-		$('.box:first').clone().appendTo('#films');
+			var img = $('.pic');
+			$(img[i]).attr('src', obj[i].pic);
 
-		var img = $('.pic');
-		$(img[i]).attr('src', data[i].pic);
-		$(img[i]).attr('alt', data[i].name);
+			var movie = $('.movie');
+			$(movie[i]).text(obj[i].name);
 
-		var movie = $('.movie');
-		$(movie[i]).text(data[i].name);
+			var short = $('.short');
+			$(short[i]).text(obj[i].short);
 
-		var short = $('.short');
-		$(short[i]).text(data[i].short);
+			// var genre = $('.genre');
+			// $(genre[i]).text(obj[i].genre);
 
-		// var genre = $('.genre');
-		// $(genre[i]).text(data[i].genre);
-
-		var counter = $('.counter');
-		$(counter[i]).text(Math.floor((Math.random() * 1000) + 1));
+			var counter = $('.counter');
+			$(counter[i]).text(Math.floor((Math.random() * 1000) + 1));		
+		};
 	};
 
+	insert(data);
 
 	$('.likeBtn').click(function() {
 		var knot = $(this).parents('div.cntBox');
@@ -40,6 +42,64 @@ $(document).ready(function(){
 
 	});
 
+
+
+
+
+	var boxes = $('.box');
+	var pNumb = boxes.find('.counter');
+
+	console.log();
+
+
+	function compare(a, b) {
+		const nameA = a.name;
+		const nameB = b.name;
+
+		if (nameA < nameB) {
+	        return 1;
+	    } else if (nameA > nameB) {
+	        return -1;
+	    } else {
+	        return 0;
+	    }
+	};
+
+
+
+	$('#sortName').click(function() {
+		data.sort(compare);
+		
+
+		insert(data);
+
+		// insert(obj);
+		// console.log(obj);
+	});
+
+	
+	
+
+
+
+
+// 	var wrap = $('#films .box');
+// 	var count = 0;
+
+// 	wrap.sort(function (a, b) {
+    
+// 	    var a = parseInt($(a).find('.counter').html());
+// 	    var b = parseInt($(b).find('.counter').html());
+
+//     		count += 2;
+    
+	//     
+	//     console.log(a);
+	// });
+
+
+// $("#results").append(wrap);
+// $("#calls").append(count+1);
 
 
 
