@@ -3,56 +3,64 @@ var data = [ {
       "name": "Now You See Me",
       "short": "NOW YOU SEE ME pits an elite FBI squad in a game of cat and mouse against \"The Four Horsemen\", a super-team of the world's greatest illusionists. \"The Four Horsemen\" pull off a series of daring heists against corrupt business leaders during their performances, showering the stolen profits on their audiences while staying one step ahead of the law.",
       "pic": "img/see_me.jpg",
-      "genre": "Mystery & Suspense"
+      "genre": "Mystery & Suspense",
+      "value": "4"
 
       },{
 
       "name": "Fracture",
       "short": "It is the story of a man who shoots his unfaithful wife, and then engages in a battle of wits with a young assistant district attorney.",
       "pic": "img/fracture.jpg",
-      "genre": "Mystery & Suspense"
+      "genre": "Mystery & Suspense",
+      "value": "6"
 
       },{
 
       "name": "Mamma Mia",
       "short": "Longing to discover the identity of her true father before she exchanges her wedding vows, the daughter of a once-rebellious single mother secretly invites a trio of paternal candidates to her upcoming wedding in this feature adaptation of the beloved stage musical.",
       "pic": "img/mamma_mia.jpg",
-      "genre": "Musical"
+      "genre": "Musical",
+      "value": "3"
 
       },{
 
       "name": "Greatest Showman",
       "short": "Inspired by the imagination of P.T. Barnum, The Greatest Showman is an original musical that celebrates the birth of show business & tells of a visionary who rose from nothing to create a spectacle that became a worldwide sensation.",
       "pic": "img/showman.jpg",
-      "genre": "Musical"
+      "genre": "Musical",
+      "value": "2"
 
       },{
 
       "name": "Zootopia",
       "short": "Movie about the unlikely partnership between a rabbit police officer and a red fox con artist, as they uncover a conspiracy involving the disappearance of savage predator inhabitants of a mammalian metropolis.",
       "pic": "img/zootopia.jpg",
-      "genre": "Animation"
+      "genre": "Animation",
+      "value": "8"
 
       },{
 
       "name": "Hotel Transylvania",
       "short": "The film tells a story of Count Dracula, the owner of a hotel called Hotel Transylvania where the world's monsters can take a rest from human civilization. Dracula invites some of the most famous monsters to celebrate the 118th birthday of his daughter Mavis. When the 'human-free hotel' is unexpectedly visited by an ordinary 21-year-old traveler ",
       "pic": "img/transylvania.png",
-      "genre": "Animation"
+      "genre": "Animation",
+      "value": "9"
 
       },{
 
       "name": "The ring",
       "short": "A disturbing videotape appears to hold the power of life and death over those who view it in this offbeat thriller. A strange videotape begins making the rounds in a town in the Pacific Northwest; it is full of bizarre and haunting images, and whoever watches it dies seven days later.",
       "pic": "img/ring.jpg",
-      "genre": "Horror"
+      "genre": "Horror",
+      "value": "2"
 
       },{
 
       "name": "The Omen",
       "short": "The Omen concerns a young child replaced at birth by American Ambassador Robert Thorn unbeknownst to his wife, after their own son was murdered at the hospital, enabling the son of Satan to grow up with wealth and power. They are surrounded by mysterious and ominous deaths, unaware that the child, Damien, is the Antichrist.",
       "pic": "img/omen.jpg",
-      "genre": "Horror"
+      "genre": "Horror",
+      "value": "0"
 
       }, 
 ];

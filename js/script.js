@@ -1,35 +1,35 @@
 $(document).ready(function(){
-		
-	$('.pic').attr('src', data[0].pic);
-	$('.movie').text(data[0].name);		
-	$('.short').text(data[0].short);		
-	// $('.genre').text(films[0].genre);		
-	$('.counter').text(Math.floor((Math.random() * 1000) + 1));
-
-  
-	function insert(obj) {
-		for ( i = 1; i < obj.length; i++) {
-			
-			$('.box:first').clone().appendTo('#films');
-
-			var img = $('.pic');
-			$(img[i]).attr('src', obj[i].pic);
-
-			var movie = $('.movie');
-			$(movie[i]).text(obj[i].name);
-
-			var short = $('.short');
-			$(short[i]).text(obj[i].short);
-
-			// var genre = $('.genre');
-			// $(genre[i]).text(obj[i].genre);
-
-			var counter = $('.counter');
-			$(counter[i]).text(Math.floor((Math.random() * 1000) + 1));		
-		};
+	
+/* -------- create HTML content based on json lenght --------*/
+	
+	for ( i = 1; i < data.length; i++) {		
+		$('.box:first').clone().appendTo('#films');		
 	};
 
-	insert(data);
+/* -------- function for loading json --------*/	
+
+function insert(obj) {
+	for ( i = 0; i < obj.length; i++) {	
+		var img = $('.pic');
+		$(img[i]).attr('src', obj[i].pic);
+
+		var movie = $('.movie');
+		$(movie[i]).text(obj[i].name);
+
+		var short = $('.short');
+		$(short[i]).text(obj[i].short);
+
+		// var genre = $('.genre');
+		// $(genre[i]).text(obj[i].genre);
+
+		var counter = $('.counter');
+		$(counter[i]).text(parseInt(obj[i].value) );		
+	};
+};
+
+insert(data);
+
+/* -------- like button --------*/
 
 	$('.likeBtn').click(function() {
 		var knot = $(this).parents('div.cntBox');
@@ -44,63 +44,37 @@ $(document).ready(function(){
 
 
 
+/* -------- sort content --------*/
 
+var obj = data;
 
-	var boxes = $('.box');
-	var pNumb = boxes.find('.counter');
+	function checkLikes(a, b) {
+       return b.value - a.value;
+    };
 
-	console.log();
+    function sortDataByLikes() {
+        return obj.sort(checkLikes);
+    };
 
-
-	function compare(a, b) {
-		const nameA = a.name;
-		const nameB = b.name;
-
-		if (nameA < nameB) {
-	        return 1;
-	    } else if (nameA > nameB) {
-	        return -1;
-	    } else {
-	        return 0;
-	    }
-	};
-
-
-
-	$('#sortName').click(function() {
-		data.sort(compare);
-		
-
-		insert(data);
-
-		// insert(obj);
-		// console.log(obj);
-	});
-
-	
+    $("#sortLikes").click(function() {
+        sortDataByLikes();
+        insert(obj);
+    });
 	
 
 
+	function checkTitles(a, b) {
+        return a.name.localeCompare(b.name);
+    };
 
+    function sortDataByAlphabet() {
+        return obj.sort(checkTitles);
+    };
 
-// 	var wrap = $('#films .box');
-// 	var count = 0;
-
-// 	wrap.sort(function (a, b) {
-    
-// 	    var a = parseInt($(a).find('.counter').html());
-// 	    var b = parseInt($(b).find('.counter').html());
-
-//     		count += 2;
-    
-	//     
-	//     console.log(a);
-	// });
-
-
-// $("#results").append(wrap);
-// $("#calls").append(count+1);
-
+    $("#sortName").click(function() {
+        sortDataByAlphabet();
+        insert(obj);
+    });
 
 
 
